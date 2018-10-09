@@ -1,0 +1,16 @@
+{
+  "name": "leaflet-piemarker",
+  "version": "0.1.0",
+  "description": "Leaflet plugin for adding pie chart markers",
+  "keywords": [
+    "leaflet",
+    "pie",
+    "marker",
+    "chart"
+  ],
+  "author": "Thomas Hurtig",
+  "license": "BSD-3-Clause",
+  "peerDependencies": {
+    "leaflet": "1.x"
+  }
+}
