@@ -2,7 +2,7 @@
 
 [Leaflet](https://leafletjs.com) plugin for adding svg pie charts based on [David Gilbertson: "A simple pie chart in SVG"](https://hackernoon.com/a-simple-pie-chart-in-svg-dbdd653b6936).
 
-[pie marker example](https://nlga.github.io/leaflet-piemarker)
+[pie marker example](https://nlga.github.io/leaflet-piemarker/examples/piemarker.html)
 
 Should work with Leaflet 1.x.
 
@@ -34,4 +34,4 @@ L.Marker.pieMarker([51.505, -0.09], {
 - scale on zoom
 
 ## License
-This project is licensed under the BSD 3-Clause License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the BSD 3-Clause License - see the [LICENSE](LICENSE) file for details.
