@@ -121,7 +121,9 @@
          * @param {String} data.color
          */
         _createSlice: function (svg, total, data) {
-            var [startX, startY] = this._getCoordinatesForPercent(this._cumulativePercent);
+            var start  = this._getCoordinatesForPercent(this._cumulativePercent);
+            var startX = start[0];
+            var startY = start[1];
 
             // calc percent from data value with given precision
             var percent = data.value / total;
@@ -130,16 +132,18 @@
             // each slice starts where the last slice ended, so keep a cumulative percent
             this._cumulativePercent += percent;
             
-            var [endX, endY] = this._getCoordinatesForPercent(this._cumulativePercent);
+            var end = this._getCoordinatesForPercent(this._cumulativePercent);
+            var endX = end[0];
+            var endY = end[1];
           
             // if the slice is more than 50%, take the large arc (the long way around)
             var largeArcFlag = percent > .5 ? 1 : 0;
           
             // create an array and join it just for code readability
             var pathData = [
-              `M ${startX} ${startY}`, // Move
-              `A 1 1 0 ${largeArcFlag} 1 ${endX} ${endY}`, // Arc
-              `L 0 0`, // Line
+              'M ' + startX + ' ' + startY, // Move
+              'A 1 1 0 ' + largeArcFlag + ' 1 ' + endX + ' ' + endY, // Arc
+              'L 0 0', // Line
             ].join(' ');
           
             var path = this._createPath(pathData, data.color, data.style || '');
@@ -180,7 +184,7 @@
          * @param {Number} data.value
          * @returns {Number}
          */
-        _getTotal(data) {
+        _getTotal: function (data) {
             return data.reduce(function (cumulat, data) {
                 return cumulat + data.value;
             }, 0);
