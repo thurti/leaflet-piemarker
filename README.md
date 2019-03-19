@@ -10,13 +10,13 @@ Should work with Leaflet 1.x.
 Inlcude the scripts...
 ```js
 <script src="path/to/leaflet.js"></script> 
-<script src="path/to/Leaflet.Icon.PieIcon.js"></script>
-<script src="path/to/Leaflet.Marker.PieMarker.js"></script>
+<script src="path/to/dist/leaflet-piemarker.min.js"></script>
 ```
 
 ... and add a pie marker.
 
 ```js
+myMap = L.map(...);
 L.Marker.pieMarker([51.505, -0.09], {
             iconOptions: {
                 iconSize: [50,50],
@@ -28,6 +28,15 @@ L.Marker.pieMarker([51.505, -0.09], {
             }
         }).addTo(myMap);
 ```
+
+## Changelog
+
+### 0.1.1 (2019-03-19)
+- Fix: IE11 compatibility 
+- Add: minified version in dist/leaflet-piemarker.min.js
+
+### 0.1.0 (2018-10-09)
+- initial commit
 
 ## ToDo
 - add labels to pie chart
