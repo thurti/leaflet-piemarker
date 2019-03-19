@@ -1,6 +1,6 @@
 {
   "name": "leaflet-piemarker",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Leaflet plugin for adding pie chart markers",
   "keywords": [
     "leaflet",
@@ -10,7 +10,13 @@
   ],
   "author": "Thomas Hurtig",
   "license": "BSD-3-Clause",
+  "scripts": {
+    "build": "uglifyjs src/Leaflet.Icon.PieIcon.js src/Leaflet.Marker.PieMarker.js -o dist/leaflet-piemarker.min.js"
+  },
   "peerDependencies": {
     "leaflet": "1.x"
+  },
+  "devDependencies": {
+    "uglify-js": "^3.4.10"
   }
 }
